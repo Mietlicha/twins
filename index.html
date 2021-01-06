@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ile to już lat? :)</title>
+    <meta
+      name="description"
+      content="dostałaś podejrzaną pocztówkę z Wałbrzycha? Świetnie się składa! kliknij i zobacz co jest w środku"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="./assets/happy.png" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="clockdiv" class="visible">
+      <div>
+        <span class="days"></span>
+        <div class="smalltext">dni</div>
+      </div>
+      <div>
+        <span class="hours"></span>
+        <div class="smalltext">godzin</div>
+      </div>
+      <div>
+        <span class="minutes"></span>
+        <div class="smalltext">minut</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">sekund</div>
+      </div>
+    </div>
+    <video id="film" controls width="0" class="hidden">
+      <source src="./assets/video.mp4" type="video/mp4" />
+
+      Cholerka! Twoja przeglądarka nie wspiera tego typu wideo! Proszę o kontakt
+      na mietlicha@gmail.com
+    </video>
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
