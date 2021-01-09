@@ -1,3 +1,5 @@
+const clock = document.getElementById('clockdiv');
+
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());
   const seconds = Math.floor((total / 1000) % 60);
@@ -14,8 +16,7 @@ function getTimeRemaining(endtime) {
   };
 }
 
-function initializeClock(id, endtime) {
-  const clock = document.getElementById(id);
+function initializeClock(endtime) {
   const daysSpan = clock.querySelector('.days');
   const hoursSpan = clock.querySelector('.hours');
   const minutesSpan = clock.querySelector('.minutes');
@@ -32,7 +33,7 @@ function initializeClock(id, endtime) {
     if (t.total <= 0) {
       clearInterval(timeinterval);
 
-      document.getElementById(id).style.display = 'none';
+      clock.style.display = 'none';
 
       document.getElementById('film').classList.remove('hidden');
       document.getElementById('film').classList.add('visible');
@@ -43,5 +44,14 @@ function initializeClock(id, endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date('Jan 7, 2021 23:16:00');
-initializeClock('clockdiv', deadline);
+const deadline = new Date('Jan 9, 2021 21:20:00');
+const now = Date.now();
+
+if (deadline > now) {
+  initializeClock(deadline);
+} else {
+  clock.style.display = 'none';
+
+  document.getElementById('film').classList.remove('hidden');
+  document.getElementById('film').classList.add('visible');
+}
