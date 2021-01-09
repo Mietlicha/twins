@@ -44,7 +44,7 @@ function initializeClock(endtime) {
   const timeinterval = setInterval(updateClock, 1000);
 }
 
-const deadline = new Date('Jan 9, 2021 21:20:00');
+const deadline = new Date('Jan 15, 2021 00:00:00');
 const now = Date.now();
 
 if (deadline > now) {
